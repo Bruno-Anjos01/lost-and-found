@@ -22,5 +22,11 @@
 - Sistema cadastro de usuário
 
 ## 🚀 Execução
-### Clone o repositório:
-git clone https://github.com/Bruno-Anjos01/achados-e-perdidos.git
+### 1. Clone o repositório:
+``` git clone https://github.com/Bruno-Anjos01/achados-e-perdidos.git```
+### 2. Vá para a pasta do projeto:
+``` cd lost-and-found```
+### 3. Instale as bibliotecas necessárias:
+``` pip install -r requirements.txt```
+### 4. Rode o projeto!
+``` python3 src/main.py```
