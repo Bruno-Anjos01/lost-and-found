@@ -2,21 +2,42 @@
 {% block title %}Feed — Achados & Perdidos{% endblock %}
 
 {% block body %}
-<h2 class="mb-4">Feed público</h2>
+
+<h2 class="mb-4 text-center">Feed público</h2>
+
 <div class="row">
   {% for foto in fotos %}
-    <div class="col-md-4 mb-3">
-      <div class="card", style="background-color: gray; border-color: gray">
-        <img src="{{ url_for('static', filename=foto.caminho_imagem) }}" class="card-img-top">
-        <div class="card-body">
-          <h6>{{ foto.titulo }}</h6>
-          <p class="text-truncate">{{ foto.descricao }}</p>
-          <small class="text-muted">Postado por {{ foto.usuario.username }}</small>
+    <div class="col-md-4 mb-4">
+      
+      <div class="card shadow-sm border-0 h-100"
+           style="background-color: #6c757d; border-radius: 12px;">
+
+        <img src="{{ url_for('static', filename=foto.caminho_imagem) }}"
+             class="card-img-top"
+             style="height: 200px; object-fit: cover;
+                    border-top-left-radius:12px;
+                    border-top-right-radius:12px;">
+
+        <div class="card-body text-white d-flex flex-column">
+
+          <h6 class="fw-bold">{{ foto.titulo }}</h6>
+
+          <p class="text-truncate flex-grow-1">
+            {{ foto.descricao }}
+          </p>
+
+          <small class="text-light">
+            Postado por {{ foto.usuario.username }}
+          </small>
+
         </div>
+
       </div>
+
     </div>
   {% else %}
-    <p>Nenhum item encontrado.</p>
+    <p class="text-center text-muted">Nenhum item encontrado.</p>
   {% endfor %}
 </div>
+
 {% endblock %}

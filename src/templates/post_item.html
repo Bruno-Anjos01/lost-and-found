@@ -2,28 +2,40 @@
 {% block title %}Postar Item{% endblock %}
 
 {% block body %}
-<div class="container mt-4">
-    <h2 class="mb-4 text-center">Postar novo item</h2>
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+  
+  <div class="col-md-6 col-lg-5">
+    <div class="card shadow-lg border-0" style="border-radius: 15px; background-color: #6c757d;">
+      
+      <div class="card-body p-4 text-white">
+        <h4 class="mb-4 text-center">Postar novo item</h4>
 
-    <form method="POST" enctype="multipart/form-data">
-        {{ form.hidden_tag() }}
+        <form method="POST" enctype="multipart/form-data">
+          {{ form.hidden_tag() }}
 
-        <div class="mb-3">
+          <div class="mb-3">
             {{ form.titulo.label(class="form-label") }}
-            {{ form.titulo(class="form-control", style="background-color: gray; border-color: gray") }}
-        </div>
+            {{ form.titulo(class="form-control", style="background-color: #e9ecef;") }}
+          </div>
 
-        <div class="mb-3">
+          <div class="mb-3">
             {{ form.descricao.label(class="form-label") }}
-            {{ form.descricao(class="form-control", rows="4", style="background-color: gray; border-color: gray") }}
-        </div>
+            {{ form.descricao(class="form-control", rows="4", style="background-color: #e9ecef;") }}
+          </div>
 
-        <div class="mb-3">
+          <div class="mb-3">
             {{ form.imagem.label(class="form-label") }}
-            {{ form.imagem(class="form-control", style="background-color: gray; border-color: gray") }}
-        </div>
+            {{ form.imagem(class="form-control", style="background-color: #e9ecef;") }}
+          </div>
 
-        {{ form.submit(class="btn btn-dark w-100") }}
-    </form>
+          <div class="d-grid">
+            {{ form.submit(class="btn btn-dark") }}
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
 </div>
 {% endblock %}
