@@ -3,7 +3,7 @@
 
 {% block body %}
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
-  <div class="card shadow-lg" style="width: 500px; border-radius: 15px; background-color: transparent;">
+  <div class="card shadow-lg" style="width: 500px; border-radius: 15px; background-color: transparent; border-color: black;">
 
     <div class="card-body">
       <h4 class="text-center mb-4 text-white">Cadastro de Conta</h4>
@@ -13,22 +13,22 @@
 
         <div class="mb-3 text-white">
           {{ form.username.label(class="form-label") }}
-          {{ form.username(class="form-control", placeholder='Ex: usuário01', maxlength=20, style="background-color: #e9ecef;") }}
+          {{ form.username(class="form-control", placeholder='Ex: usuário01', maxlength=20, style="background-color: #dad9c9;") }}
         </div>
 
         <div class="mb-3 text-white">
           {{ form.email.label(class="form-label") }}
-          {{ form.email(class="form-control", placeholder='Ex: abcd@gmail.com', maxlength=120, style="background-color: #e9ecef;") }}
+          {{ form.email(class="form-control", placeholder='Ex: abcd@gmail.com', maxlength=120, style="background-color: #dad9c9;") }}
         </div>
 
         <div class="mb-3 text-white">
           {{ form.senha.label(class="form-label") }}
-          {{ form.senha(class="form-control", placeholder='123456', minlength=6, maxlength=12, style="background-color: #e9ecef;") }}
+          {{ form.senha(class="form-control", placeholder='Ex: 123456', minlength=6, maxlength=12, style="background-color: #dad9c9;") }}
         </div>
 
         <div class="mb-3 text-white">
           {{ form.confirmar_senha.label(class="form-label") }}
-          {{ form.confirmar_senha(class="form-control", placeholder='Repita sua senha', minlength=6, maxlength=12, style="background-color: #e9ecef;")
+          {{ form.confirmar_senha(class="form-control", placeholder='Repita sua senha', minlength=6, maxlength=12, style="background-color: #dad9c9;")
           }}
         </div>
 

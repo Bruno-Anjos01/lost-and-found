@@ -86,7 +86,7 @@ def admin_feed():
     return render_template("admin_feed.html", fotos=fotos)
 
 
-@app.route("/admin/add", methods=["GET", "POST"])
+@app.route("/admin/post", methods=["GET", "POST"])
 @login_required
 def adicionar_item():
     if current_user.tipo != "admin":

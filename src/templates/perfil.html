@@ -6,7 +6,7 @@
 
   <!-- PERFIL -->
   <div class="col-md-4">
-    <div class="card shadow-lg border-0" style="background-color: transparent; border-radius: 15px;">
+    <div class="card shadow-lg border-1" style="background-color: transparent; border-radius: 15px; border-color: black;">
       <div class="card-body text-white">
         <h4 class="mb-3">{{ usuario.username }}</h4>
 
@@ -29,7 +29,7 @@
     <div class="row">
       {% for foto in usuario.fotos %}
       <div class="col-md-6 mb-3">
-        <div class="card shadow-sm border-0" style="background-color: transparent; border-radius: 12px;">
+        <div class="card shadow-sm" style="background-color: transparent; border-radius: 12px; border-color: black;">
           
           <img src="{{ url_for('static', filename=foto.caminho_imagem) }}"
                class="card-img-top"

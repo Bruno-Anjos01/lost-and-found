@@ -11,7 +11,8 @@
 <div align="center">
   <img src="home.png" width="300">
 </div>
-> Sistema web para cadastro e busca de itens perdidos utilizando o Flask.
+
+# Sistema web para cadastro e busca de itens perdidos utilizando o Flask.
 
 ## ✨ Funcionalidades
 - Cadastro de itens

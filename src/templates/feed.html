@@ -9,8 +9,8 @@
   {% for foto in fotos %}
     <div class="col-md-4 mb-4">
       
-      <div class="card shadow-sm border-0 h-100"
-           style="background-color: transparent; border-radius: 12px;">
+      <div class="card shadow-sm h-100"
+           style="background-color: transparent; border-radius: 12px; border-color: black;">
 
         <img src="{{ url_for('static', filename=foto.caminho_imagem) }}"
              class="card-img-top"
