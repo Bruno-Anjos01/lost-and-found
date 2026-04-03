@@ -6,7 +6,7 @@
 
   <!-- PERFIL -->
   <div class="col-md-4">
-    <div class="card shadow-lg border-0" style="background-color: #6c757d; border-radius: 15px;">
+    <div class="card shadow-lg border-0" style="background-color: transparent; border-radius: 15px;">
       <div class="card-body text-white">
         <h4 class="mb-3">{{ usuario.username }}</h4>
 
@@ -24,12 +24,12 @@
 
   <!-- POSTAGENS -->
   <div class="col-md-8">
-    <h5 class="mb-3">Minhas postagens</h5>
+    <h5 class="mb-3 text-white">Minhas postagens</h5>
 
     <div class="row">
       {% for foto in usuario.fotos %}
       <div class="col-md-6 mb-3">
-        <div class="card shadow-sm border-0" style="background-color: #6c757d; border-radius: 12px;">
+        <div class="card shadow-sm border-0" style="background-color: transparent; border-radius: 12px;">
           
           <img src="{{ url_for('static', filename=foto.caminho_imagem) }}"
                class="card-img-top"
@@ -49,7 +49,7 @@
         </div>
       </div>
       {% else %}
-        <p class="text-muted">Nenhum item postado por você.</p>
+        <p class="text-white">Nenhum item postado por você.</p>
       {% endfor %}
     </div>
   </div>

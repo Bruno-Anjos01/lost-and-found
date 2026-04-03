@@ -37,7 +37,7 @@ def login():
         usuario = Usuario.query.filter_by(email=form.email.data).first()
         if usuario and bcrypt.check_password_hash(usuario.senha, form.senha.data):
             login_user(usuario)
-            flash("Login realizado.", "dark")
+            flash("Login realizado.", "primary")
             return redirect(
                 url_for("admin_feed") if usuario.tipo == "admin" else url_for("feed")
             )
@@ -57,7 +57,7 @@ def criarconta():
         )
         db.session.add(usuario)
         db.session.commit()
-        flash("Conta criada com sucesso.", "dark")
+        flash("Conta criada com sucesso.", "primary")
         return redirect(url_for("login"))
     return render_template("create_account.html", form=form)
 
@@ -66,7 +66,7 @@ def criarconta():
 @login_required
 def logout():
     logout_user()
-    flash("Você saiu da sessão.", "dark")
+    flash("Você saiu da sessão.", "prymary")
     return redirect(url_for("login"))
 
 
@@ -116,7 +116,7 @@ def adicionar_item():
         )
         db.session.add(foto)
         db.session.commit()
-        flash("Item adicionado.", "dark")
+        flash("Item adicionado.", "primary")
         return redirect(url_for("admin_feed"))
 
     return render_template("post_item.html", form=form)
@@ -153,7 +153,7 @@ def editar_item(item_id):
             foto.caminho_imagem = f"uploads/{nome_unico}"
 
         db.session.commit()
-        flash("Item atualizado.", "dark")
+        flash("Item atualizado.", "white")
         return redirect(url_for("admin_feed"))
 
     return render_template("edit_item.html", foto=foto)
@@ -176,7 +176,7 @@ def remover_item(item_id):
 
     db.session.delete(foto)
     db.session.commit()
-    flash("Item removido.", "dark")
+    flash("Item removido.", "white")
     return redirect(url_for("admin_feed"))
 
 
