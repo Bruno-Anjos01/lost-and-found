@@ -1,8 +1,6 @@
-# Definir os Modelos do Banco de Dados
-from manager import db, login_manager
+from extensions import db, login_manager
 from datetime import datetime
 from flask_login import UserMixin
-
 
 @login_manager.user_loader
 def load_usuario(id_usuario):

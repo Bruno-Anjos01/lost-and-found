@@ -22,6 +22,11 @@
 - Sistema de login de usuário
 - Sistema cadastro de usuário
 
+## 🔮 Funcionalidades futuras
+- Sistema de notificação
+- Melhoria na responssividade para mobile
+- Login com o Google
+
 ## 🚀 Execução
 ### 1. Clone o repositório:
 ``` git clone https://github.com/Bruno-Anjos01/achados-e-perdidos.git```

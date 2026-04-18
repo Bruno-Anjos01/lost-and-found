@@ -4,7 +4,9 @@ import uuid
 from flask import render_template, url_for, redirect, flash, request
 from flask_login import login_required, login_user, logout_user, current_user
 from werkzeug.utils import secure_filename
-from manager import app, db, bcrypt
+
+from manager import app
+from extensions import db, bcrypt
 from models import Usuario, Foto
 from forms import FormLogin, FormCriarConta, FormPostagem
 
